@@ -13,7 +13,9 @@ namespace SDL {
 		//get singleton instance
 		static SDL& Get() ;
 
-		void PollEvents();
+		int PollEvents();
+
+		SDL_Event GetEvent() const ;
 
 	private:
 		/// @brief constructor, initializes SDL.
