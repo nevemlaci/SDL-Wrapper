@@ -1,6 +1,5 @@
 ﻿  cpp_SDL_Renderer.cpp
   cpp_SDL_Texture.cpp
-  cpp_SDL_Window.cpp
   Generating Code...
 SDL2_image.lib(SDL2_image.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in SDL2.lib(SDL2.dll); second definition ignored
   SDLWrapper.vcxproj -> C:\Users\nevem\Documents\Personal\Programming\CPP\SDLWrapper\x64\Debug\SDLWrapper.lib

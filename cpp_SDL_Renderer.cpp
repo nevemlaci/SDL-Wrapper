@@ -37,4 +37,12 @@ namespace SDL {
 	void Renderer::RenderPresent() {
 		SDL_RenderPresent(this->sdlrenderer);
 	}
+
+	void Renderer::EnableVsync() {
+		SDL_RenderSetVSync(this->sdlrenderer, 1);
+	}
+
+	void Renderer::DisableVsync() {
+		SDL_RenderSetVSync(this->sdlrenderer, 0);
+	}
 }

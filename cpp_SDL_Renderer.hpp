@@ -22,6 +22,10 @@ namespace SDL {
 		void RenderClear();
 
 		void RenderPresent();
+
+		void EnableVsync();
+
+		void DisableVsync();
 	private:
 		const Window& window;
 		SDL_Renderer* sdlrenderer;
