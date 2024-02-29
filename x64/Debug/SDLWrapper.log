@@ -1,8 +1,6 @@
-﻿  cpp_SDL.cpp
+﻿  cpp_SDL_Renderer.cpp
+  cpp_SDL_Texture.cpp
   cpp_SDL_Window.cpp
   Generating Code...
-C:\Users\nevem\Documents\Personal\Programming\CPP\SDLWrapper\cpp_SDL_Window.cpp(5,48): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\nevem\Documents\Personal\Programming\CPP\SDLWrapper\cpp_SDL_Window.cpp(5,45): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\nevem\Documents\Personal\Programming\CPP\SDLWrapper\cpp_SDL_Window.cpp(5,42): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\nevem\Documents\Personal\Programming\CPP\SDLWrapper\cpp_SDL_Window.cpp(5,39): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+SDL2_image.lib(SDL2_image.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in SDL2.lib(SDL2.dll); second definition ignored
   SDLWrapper.vcxproj -> C:\Users\nevem\Documents\Personal\Programming\CPP\SDLWrapper\x64\Debug\SDLWrapper.lib

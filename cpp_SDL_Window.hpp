@@ -5,13 +5,26 @@
 namespace SDL {
 	class Window {
 	public:
-		Window(const char* title, size_t x, size_t y, size_t w, size_t h, Uint32 flags);
-		//getters
+		/// @brief Constructs a window
+		/// @param title Title of the window
+		/// @param x 
+		/// @param y 
+		/// @param w 
+		/// @param h 
+		/// @param flags SDL Flag / multiple flags or'd together.
+		Window(const char* title, int x, int y, int w, int h, Uint32 flags);
+		
+		~Window();
+
+		/// @brief 
+		/// @return the SDL_Window* of the current Window instance 
 		SDL_Window* GetWindow() const;
 
-		
+		/// @brief hides the window
 		void HideWindow();
+		/// @brief shows the window
 		void ShowWindow();
+
 
 	private:
 		SDL_Window* sdlwindow;
