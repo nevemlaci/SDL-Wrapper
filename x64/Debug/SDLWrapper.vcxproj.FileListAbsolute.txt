@@ -1,0 +1,1 @@
+C:\Users\nevem\Documents\Personal\Programming\CPP\SDLWrapper\x64\Debug\SDLWrapper.lib
