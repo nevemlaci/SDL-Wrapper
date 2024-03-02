@@ -5,7 +5,7 @@
 namespace SDL {
 	class Window {
 	public:
-		/// @brief Constructs a window
+		/// @brief Constructs a window. Throws const char* SDL_GetError() if the window initialization failed.
 		/// @param title Title of the window
 		/// @param x 
 		/// @param y 

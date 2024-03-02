@@ -5,29 +5,71 @@
 #include "cpp_SDL_Texture.hpp"
 
 namespace SDL {
+	/// @brief Renderer class wrapping SDL_Renderer
 	class Renderer {
 	public:
+		/// @brief renderer constructor
+		/// @param p_window window that the renderer is bound to
+		/// @param index index of renderer in the given window
+		/// @param flags an SDL renderer flag or multiple flags or'd together
 		Renderer(const Window& p_window, int index, Uint32 flags);
 		
-		SDL_Renderer* GetSDLRenderer();
+		/// @brief destructs the renderer(calls the appropriate SDL function for it)
+		~Renderer();
 
-		void RenderCopy(const Texture& texture, double angle);
+		/// @brief getter for the SDL_Renderer
+		/// @return returns the SDL_Renderer instance 
+		SDL_Renderer* GetSDLRenderer() const;
 
-		void RenderCopySrc(const Texture& texture, Rect srcrect, double angle);
+		/// @brief copies the texture to the renderer
+		/// Use this function to copy a whole texture to the whole renderer.
+		/// @param texture the texture to be copied
+		/// @param angle optional rotation
+		void RenderCopy(const Texture& texture, double angle = 0) const;
 
-		void RenderCopyDst(const Texture& texture, Rect dstrect, double angle);
+		/// @brief copies a part of the texture to the renderer
+		/// Use this function to copy a part of a texture to the whole renderer.
+		/// @param texture the texture to be copied
+		/// @param srcrect the rectangle specifying the position and size of the texture part to be copied
+		/// @param angle optional rotation
+		void RenderCopySrc(const Texture& texture, Rect srcrect, double angle = 0) const;
 
-		void RenderCopyEx(const Texture& texture, Rect srcrect, Rect dstrect, double angle);
+		/// @brief copies a texture to a specific position on the renderer.
+		/// Use this function to copy the whole texture to a given position with a given size.
+		/// @param texture the texture to be copied
+		/// @param dstrect the rectangle specifying the position and size
+		/// @param angle optional rotation
+		void RenderCopyDst(const Texture& texture, Rect dstrect, double angle = 0) const;
 
-		void RenderClear();
+		/// @brief copies a part of a texture to a specific position on the renderer.
+		/// @param texture the texture to be copied
+		/// @param srcrect the rectangle specifying the position and size of the texture part to be copied
+		/// @param dstrect the rectangle specifying the position and size
+		/// @param angle optional rotation
+		void RenderCopyEx(const Texture& texture, Rect srcrect, Rect dstrect, double angle = 0) const;
 
-		void RenderPresent();
+		/// @brief Clears the renderer
+		void RenderClear() const;
 
-		void EnableVsync();
+		/// @brief Renders all textures copied to the renderer
+		void RenderPresent() const;
 
-		void DisableVsync();
+		/// @brief Enables VSync
+		void EnableVsync() const;
+
+		/// @brief Disables VSync
+		void DisableVsync() const;
+
+		void SetRenderColor(int r, int g, int b, int a) const;
+
+		/// @brief same as Renderer::RenderCopy
+		/// @param texture texture to be copied
+		void operator+=(const Texture& texture) const;
 	private:
+		///@brief window that the renderer is bound to(rendering context)
 		const Window& window;
+
+		/// @brief SDL_Renderer instance
 		SDL_Renderer* sdlrenderer;
 	};
 }

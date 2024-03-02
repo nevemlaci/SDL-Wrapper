@@ -2,7 +2,11 @@
 #include "cpp_SDL_Renderer.hpp"
 
 namespace SDL {
-	Texture::Texture(const char* path, Renderer& renderer) : sdltexture(IMG_LoadTexture(renderer.GetSDLRenderer(), path)) {}
+	Texture::Texture(const char* path, Renderer& renderer) : sdltexture(IMG_LoadTexture(renderer.GetSDLRenderer(), path)) {
+		if (!sdltexture) {
+			throw SDL_GetError();
+		}
+	}
 
 	Texture::~Texture() {
 		SDL_DestroyTexture(this->sdltexture);

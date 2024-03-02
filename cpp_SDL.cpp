@@ -4,7 +4,7 @@
 namespace SDL {
 	SDL::SDL() : sdlinit(SDL_Init(SDL_INIT_EVERYTHING)), event(SDL_Event()) {
 		if (sdlinit != 0) {
-			std::cout << "ERROR: Failed to initialize SDL. SDLInit value: " << sdlinit << "\t\nSDL Error :" << SDL_GetError() << '\n';
+			throw SDL_GetError();
 		}
 	};
 
@@ -17,8 +17,16 @@ namespace SDL {
 		return SDL_PollEvent(&(this->event));
 	}
 
-	SDL_Event SDL::GetEvent() const {
+	const SDL_Event& SDL::GetEvent() {
 		return this->event;
+	}
+
+	bool SDL::CheckKey(SDL_Scancode key) {
+		return this->keyStates[key];
+	}
+
+	bool SDL::CheckKey(const char* key) {
+		return this->keyStates[SDL_GetScancodeFromName(key)];
 	}
 }
 
