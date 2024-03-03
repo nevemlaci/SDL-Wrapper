@@ -69,12 +69,10 @@ namespace SDL {
 
 		/// @brief same as Renderer::RenderCopy
 		/// @param texture texture to be copied
-		void operator<<(const Texture& texture) const;
+		Renderer& operator<<(const Texture& texture);
 
-		void operator<<(const Rect& rect);
+		Renderer& operator<<(const Rect& rect);
 
-		/// @brief the dstrect of the next texture copied by the inserter operator
-		Rect nextrect;
 
 	private:
 		///@brief window that the renderer is bound to(rendering context)
@@ -83,7 +81,8 @@ namespace SDL {
 		/// @brief SDL_Renderer instance
 		SDL_Renderer* sdlrenderer;
 
-		
+		/// @brief the dstrect of the next texture copied by the inserter operator
+		Rect nextrect;
 	};
 
 }

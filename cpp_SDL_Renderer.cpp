@@ -57,12 +57,14 @@ namespace SDL {
 	}
 
 
-	void Renderer::operator<<(const Rect& rect) {
+	Renderer& Renderer::operator<<(const Rect& rect) {
 		this->nextrect = rect;
+		return (*this);
 	}
 
-	void Renderer::operator<<(const Texture& texture) const {
-		RenderCopy(texture, 0);
+	Renderer& Renderer::operator<<(const Texture& texture) {
+		this->RenderCopyDst(texture, this->nextrect);
+		return (*this);
 	}
 
 }
