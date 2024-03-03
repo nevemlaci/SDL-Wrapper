@@ -1,10 +1,16 @@
 #ifndef __CPPSDLRENDERER__
 #define __CPPSDLRENDERER__
-#include "cpp_SDL_Window.hpp"
 #include "cpp_SDL_Rect.hpp"
+#include "cpp_SDL_Renderermanip.hpp"
 #include "cpp_SDL_Texture.hpp"
+#include "cpp_SDL_Window.hpp"
 
 namespace SDL {
+
+	enum InsertMode {
+		src, dst
+	};
+
 	/// @brief Renderer class wrapping SDL_Renderer
 	class Renderer {
 	public:
@@ -71,10 +77,14 @@ namespace SDL {
 		/// @param texture texture to be copied
 		Renderer& operator<<(const Texture& texture);
 
-		Renderer& operator<<(const Rect& rect);
+		Renderer& operator<<(const at& a);
+
+		Renderer& operator<<(const from& f);
 
 
 	private:
+
+
 		///@brief window that the renderer is bound to(rendering context)
 		const Window& window;
 
@@ -83,7 +93,11 @@ namespace SDL {
 
 		/// @brief the dstrect of the next texture copied by the inserter operator
 		Rect nextrect;
+
+		InsertMode insertmode;
 	};
+
+	
 
 }
 

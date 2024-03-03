@@ -149,12 +149,14 @@
     <ClInclude Include="cpp_SDL_include.hpp" />
     <ClInclude Include="cpp_SDL_Rect.hpp" />
     <ClInclude Include="cpp_SDL_Renderer.hpp" />
+    <ClInclude Include="cpp_SDL_Renderermanip.hpp" />
     <ClInclude Include="cpp_SDL_Texture.hpp" />
     <ClInclude Include="cpp_SDL_Window.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cpp_SDL.cpp" />
     <ClCompile Include="cpp_SDL_Renderer.cpp" />
+    <ClCompile Include="cpp_SDL_Renderermanip.cpp" />
     <ClCompile Include="cpp_SDL_Texture.cpp" />
     <ClCompile Include="cpp_SDL_Window.cpp" />
   </ItemGroup>

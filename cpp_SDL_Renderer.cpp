@@ -2,7 +2,7 @@
 
 namespace SDL {
 	Renderer::Renderer(const Window& p_window, int index, Uint32 flags)
-		: window(p_window), sdlrenderer(SDL_CreateRenderer(p_window.GetWindow(), index, flags)) {	
+		: window(p_window), sdlrenderer(SDL_CreateRenderer(p_window.GetWindow(), index, flags)), insertmode(src), nextrect({0, 0, 0, 0}) {
 		if (!sdlrenderer) {
 			throw SDL_GetError();
 		}
@@ -57,13 +57,21 @@ namespace SDL {
 	}
 
 
-	Renderer& Renderer::operator<<(const Rect& rect) {
-		this->nextrect = rect;
+	Renderer& Renderer::operator<<(const at& a) {
+		this->insertmode = dst;
+		this->nextrect = a.getrect();
+		return (*this);
+	}
+
+	Renderer& Renderer::operator<<(const from& f) {
+		this->insertmode = src;
+		this->nextrect = f.getrect();
 		return (*this);
 	}
 
 	Renderer& Renderer::operator<<(const Texture& texture) {
-		this->RenderCopyDst(texture, this->nextrect);
+		this->insertmode == dst ? this->RenderCopyDst(texture, this->nextrect) : this->RenderCopySrc(texture, this->nextrect);
+		
 		return (*this);
 	}
 
