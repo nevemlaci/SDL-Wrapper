@@ -1,5 +1,4 @@
-﻿  cpp_SDL.cpp
-  cpp_SDL_Renderer.cpp
+﻿  cpp_SDL_Renderer.cpp
   cpp_SDL_Texture.cpp
   Generating Code...
 SDL2_image.lib(SDL2_image.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in SDL2.lib(SDL2.dll); second definition ignored

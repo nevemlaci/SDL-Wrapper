@@ -56,8 +56,13 @@ namespace SDL {
 		SDL_SetRenderDrawColor(this->sdlrenderer, r, g, b, a);
 	}
 
-	//funky
-	void Renderer::operator+=(const Texture& texture) const {
+
+	void Renderer::operator<<(const Rect& rect) {
+		this->nextrect = rect;
+	}
+
+	void Renderer::operator<<(const Texture& texture) const {
 		RenderCopy(texture, 0);
 	}
+
 }

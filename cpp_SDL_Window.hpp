@@ -22,6 +22,7 @@ namespace SDL {
 
 		/// @brief hides the window
 		void HideWindow();
+
 		/// @brief shows the window
 		void ShowWindow();
 

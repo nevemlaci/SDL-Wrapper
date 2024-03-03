@@ -60,18 +60,33 @@ namespace SDL {
 		/// @brief Disables VSync
 		void DisableVsync() const;
 
+		/// @brief Sets the renderclear color
+		/// @param r 0-255 (red)
+		/// @param g 0-255 (green)
+		/// @param b 0-255 (blue)
+		/// @param a 0-255 (alpha)
 		void SetRenderColor(int r, int g, int b, int a) const;
 
 		/// @brief same as Renderer::RenderCopy
 		/// @param texture texture to be copied
-		void operator+=(const Texture& texture) const;
+		void operator<<(const Texture& texture) const;
+
+		void operator<<(const Rect& rect);
+
+		/// @brief the dstrect of the next texture copied by the inserter operator
+		Rect nextrect;
+
 	private:
 		///@brief window that the renderer is bound to(rendering context)
 		const Window& window;
 
 		/// @brief SDL_Renderer instance
 		SDL_Renderer* sdlrenderer;
+
+		
 	};
+
 }
+
 
 #endif

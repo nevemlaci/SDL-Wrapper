@@ -21,6 +21,15 @@ namespace SDL {
 			SDL_FRect ret = { x, y, w, h };
 			return ret;
 		}
+
+		Rect operator=(const Rect& other) {
+			this->x = other.x;
+			this->y = other.y;
+			this->w = other.w;
+			this->h = other.h;
+
+			return (*this);
+		}
 	};
 }
 

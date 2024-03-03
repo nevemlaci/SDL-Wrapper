@@ -151,6 +151,7 @@
     <ClInclude Include="cpp_SDL_Renderer.hpp" />
     <ClInclude Include="cpp_SDL_Texture.hpp" />
     <ClInclude Include="cpp_SDL_Window.hpp" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cpp_SDL.cpp" />
