@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Git">
+      <UniqueIdentifier>{26475bb7-ffd5-44ef-a3a2-c3288b570f2d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cpp_SDL.hpp">
@@ -53,5 +56,13 @@
     <ClCompile Include="cpp_SDL_Renderermanip.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitattributes">
+      <Filter>Git</Filter>
+    </None>
+    <None Include=".gitignore">
+      <Filter>Git</Filter>
+    </None>
   </ItemGroup>
 </Project>
