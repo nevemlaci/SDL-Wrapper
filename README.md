@@ -1,0 +1,1 @@
+[![MSBuild](https://github.com/nevemlaci/SDL-Wrapper/actions/workflows/msbuild.yml/badge.svg)](https://github.com/nevemlaci/SDL-Wrapper/actions/workflows/msbuild.yml)
