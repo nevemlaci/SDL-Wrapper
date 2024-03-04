@@ -27,9 +27,10 @@ jobs:
   install:
     runs-on: windows-latest
     steps:
+      - run: choco install gh
       - run: mkdir download
       - run: cd download
-      - run: curl https://github.com/libsdl-org/SDL/releases/download/release-2.30.0/SDL2-devel-2.30.0-VC.zip
+      - run: gh release download --pattern "*VC.zip" -R "https://github.com/libsdl-org/SDL"
       - run: cd ..
       - run: mkdir lib
       - run: cd .\lib
