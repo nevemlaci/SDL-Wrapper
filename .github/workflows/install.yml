@@ -11,4 +11,3 @@ jobs:
       - run: mkdir lib
       - run: cd .\lib
       - run: copy "D:\a\SDL-Wrapper\SDL-Wrapper\download\*.lib" .
-      
