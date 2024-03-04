@@ -10,4 +10,4 @@ jobs:
       - run: cd ..
       - run: mkdir lib
       - run: cd .\lib
-      - run: copy "D:\a\SDL-Wrapper\download\*.lib" .
+      - run: copy "D:\a\SDL-Wrapper\SDL_Wrapper\download\*.lib" .
