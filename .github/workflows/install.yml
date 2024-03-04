@@ -4,8 +4,8 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - run: cd "D:\a"
       - run: mkdir download
-      - run: cd "D:\a\download"
+      - run: cd download
       - run: curl https://github.com/libsdl-org/SDL/releases/download/release-2.30.0/SDL2-devel-2.30.0-VC.zip
-      - run: ls
+      - run: cd ..
+      - run: cd .\SDL-Wrapper\lib
