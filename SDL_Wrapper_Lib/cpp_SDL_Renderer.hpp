@@ -86,15 +86,15 @@ namespace SDL {
 
 
 		///@brief window that the renderer is bound to(rendering context)
-		const Window& window;
+		const Window& m_Window;
 
 		/// @brief SDL_Renderer instance
-		SDL_Renderer* sdlrenderer;
+		SDL_Renderer* m_SDLRenderer;
 
 		/// @brief the dstrect of the next texture copied by the inserter operator
-		Rect nextrect;
+		Rect m_NextRect;
 
-		InsertMode insertmode;
+		InsertMode m_InsertMode;
 	};
 
 	

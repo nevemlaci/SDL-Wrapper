@@ -2,8 +2,8 @@
 #include <iostream>
 
 namespace SDL {
-	SDL::SDL() : sdlinit(SDL_Init(SDL_INIT_EVERYTHING)), event(SDL_Event()) {
-		if (sdlinit != 0) {
+	SDL::SDL() : m_SDLInit(SDL_Init(SDL_INIT_EVERYTHING)), m_SDLEvent(SDL_Event()) {
+		if (m_SDLInit != 0) {
 			throw SDL_GetError();
 		}
 	};
@@ -14,19 +14,19 @@ namespace SDL {
 	}
 
 	int SDL::PollEvents() {
-		return SDL_PollEvent(&(this->event));
+		return SDL_PollEvent(&(this->m_SDLEvent));
 	}
 
 	const SDL_Event& SDL::GetEvent() {
-		return this->event;
+		return this->m_SDLEvent;
 	}
 
 	bool SDL::CheckKey(SDL_Scancode key) {
-		return this->keyStates[key];
+		return this->m_KeyStates[key];
 	}
 
 	bool SDL::CheckKey(const char* key) {
-		return this->keyStates[SDL_GetScancodeFromName(key)];
+		return this->m_KeyStates[SDL_GetScancodeFromName(key)];
 	}
 }
 

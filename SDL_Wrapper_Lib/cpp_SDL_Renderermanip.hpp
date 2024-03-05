@@ -11,7 +11,7 @@ namespace SDL {
 		explicit at(const Rect& rect);
 		const Rect& getrect() const;
 	private:
-		const Rect& rect;
+		const Rect& m_Rect;
 	};
 
 	class from {
@@ -21,7 +21,7 @@ namespace SDL {
 		explicit from(const Rect& rect);
 		const Rect& getrect() const;
 	private:
-		const Rect& rect = { 0, 0, 0, 0 };
+		const Rect& m_Rect = { 0, 0, 0, 0 };
 	};
 }
 

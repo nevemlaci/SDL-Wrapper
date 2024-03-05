@@ -17,7 +17,7 @@ namespace SDL {
 
 		SDL_Texture* GetSDLTexture() const;
 	private:
-		SDL_Texture* sdltexture;
+		SDL_Texture* m_SDLTexture;
 	};
 }
 

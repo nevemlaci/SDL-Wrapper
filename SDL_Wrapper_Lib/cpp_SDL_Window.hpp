@@ -28,7 +28,7 @@ namespace SDL {
 
 
 	private:
-		SDL_Window* sdlwindow;
+		SDL_Window* m_SDLWindow;
 		
 	};
 }

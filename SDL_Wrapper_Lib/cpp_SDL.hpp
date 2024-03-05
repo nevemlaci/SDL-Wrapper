@@ -37,11 +37,11 @@ namespace SDL {
 		SDL();
 
 		/// @brief return value of SDL_Init
-		const int sdlinit;
+		const int m_SDLInit;
 
-		SDL_Event event;
+		SDL_Event m_SDLEvent;
 
-		const Uint8* keyStates = SDL_GetKeyboardState(nullptr);
+		const Uint8* m_KeyStates = SDL_GetKeyboardState(nullptr);
 	};
 }
 
