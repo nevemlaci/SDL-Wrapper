@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SDLWrapper", "SDL_Wrapper_Lib\SDLWrapper.vcxproj", "{D75C7600-85AA-4F8B-B5D5-EE9234B54132}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestProject", "TestProject\TestProject.vcxproj", "{BB39E894-6DDB-4A4C-B9A0-9BB3FCDA5B9C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D75C7600-85AA-4F8B-B5D5-EE9234B54132} = {D75C7600-85AA-4F8B-B5D5-EE9234B54132}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
