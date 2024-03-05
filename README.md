@@ -9,3 +9,6 @@ Build status:
 * Open the solution in Visual Studio
 * Build the solution
 * Done
+
+## Linux:
+* Should be working with g++, feel free to contribute with a makefile.
