@@ -8,10 +8,14 @@ name: MSBuild
 on:
   push:
     branches: [ "master" ]
-    paths-ignore: [ "**/README.md", "**/**.yml"]
+    paths-ignore:
+      - "**/README.md"
+      - "**/*.yml"
   pull_request:
     branches: [ "master" ]
-    paths-ignore: [ "**/README.md", "**/**.yml"]
+    paths-ignore:
+      - "**/README.md"
+      - "**/*.yml"
 
 env:
   # Path to the solution file relative to the root of the project.
