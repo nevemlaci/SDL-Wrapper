@@ -6,6 +6,7 @@ int main() {
 	SDL::Window window("asd", 400, 400, 500, 500, 0);
 	bool isRunning = true;
 	const SDL_Event& event = sdl.GetEvent();
+	SDL::MixMusic music("music.wav");
 	while (isRunning) {
 		sdl.PollEvents();
 		switch (event.type) {

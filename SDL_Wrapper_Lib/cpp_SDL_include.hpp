@@ -6,5 +6,6 @@
 #include "cpp_SDL_Renderer.hpp"
 #include "cpp_SDL_Rect.hpp"
 #include "cpp_SDL_Texture.hpp"
+#include "cpp_SDL_Mixer.hpp"
 
 #endif
