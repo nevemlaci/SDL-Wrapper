@@ -12,3 +12,6 @@ Build status:
 
 ## Linux:
 * Should be working with g++, feel free to contribute with a makefile.
+
+## MacOS:
+* Same as Windows.
