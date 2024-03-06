@@ -1,6 +1,7 @@
 #ifndef __CPPSDL__
 #define __CPPSDL__
 #include <SDL.h>
+#include "cpp_SDL_Mixer.hpp"
 
 namespace SDL {
 	/// @brief Singleton SDL class used for initializing SDL.
@@ -18,6 +19,8 @@ namespace SDL {
 		/// @brief Get static instance of SDL
 		/// @return returns the static SDL instance
 		static SDL& Get() ;
+
+		const Mixer& GetMixer() const;
 
 		/// @brief polls all SDL events, should be used in a while loop inside the main loop to handle all events
 		/// @return returns 1 if there was any events, and 0 if there wasn't any
@@ -40,6 +43,8 @@ namespace SDL {
 		const int m_SDLInit;
 
 		SDL_Event m_SDLEvent;
+
+		const Mixer& m_Mixer;
 
 		const Uint8* m_KeyStates = SDL_GetKeyboardState(nullptr);
 	};
