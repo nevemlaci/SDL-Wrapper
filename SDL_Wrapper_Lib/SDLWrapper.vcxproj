@@ -152,6 +152,7 @@
     <ClInclude Include="cpp_SDL.hpp" />
     <ClInclude Include="cpp_SDL_include.hpp" />
     <ClInclude Include="cpp_SDL_Mixer.hpp" />
+    <ClInclude Include="cpp_SDL_Mix_Chunk.hpp" />
     <ClInclude Include="cpp_SDL_Mix_Music.hpp" />
     <ClInclude Include="cpp_SDL_Rect.hpp" />
     <ClInclude Include="cpp_SDL_Renderer.hpp" />
@@ -162,6 +163,7 @@
   <ItemGroup>
     <ClCompile Include="cpp_SDL.cpp" />
     <ClCompile Include="cpp_SDL_Mixer.cpp" />
+    <ClCompile Include="cpp_SDL_Mix_Chunk.cpp" />
     <ClCompile Include="cpp_SDL_Mix_Music.cpp" />
     <ClCompile Include="cpp_SDL_Renderer.cpp" />
     <ClCompile Include="cpp_SDL_Renderermanip.cpp" />

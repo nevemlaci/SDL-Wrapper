@@ -10,10 +10,6 @@ namespace SDL {
 	MixMusic::~MixMusic() {
 		Mix_FreeMusic(this->m_SDLMusic);
 	}
-
-	void MixMusic::Play() const {
-		Mix_PlayMusic(this->m_SDLMusic, 0);
-	}
 	
 	void MixMusic::Play(int loops) const {
 		Mix_PlayMusic(this->m_SDLMusic, loops);
