@@ -11,8 +11,8 @@ namespace SDL {
 	public:
 
 		Mixer(const Mixer&) = delete;
-		Mixer operator=(const Mixer&) = delete;
 
+		Mixer operator=(const Mixer&) = delete;
 
 		/// @brief Open the default audio device for playback. An audio device is what generates sound,
 		/// so the app must open one to play audio.
@@ -25,11 +25,12 @@ namespace SDL {
 		/// @brief Sets the volume for all channels
 		/// @param volume volume value(0-128)
 		/// @return returns the new volume
-		int SetMusicVolume(unsigned int volume) const;
+		unsigned int SetMusicVolume(unsigned int volume) const;
 
 		/// @brief 
 		/// @return returns the current volume
-		int GetMusicVolume() const;
+		unsigned int GetMusicVolume() const;
+
 	private:
 		Mixer();
 
@@ -37,7 +38,7 @@ namespace SDL {
 		/// @return static instance reference to Mixer
 		static const Mixer& Get();
 
-		mutable int m_Volume;
+		mutable int m_MusicVolume;
 	};
 }
 #endif

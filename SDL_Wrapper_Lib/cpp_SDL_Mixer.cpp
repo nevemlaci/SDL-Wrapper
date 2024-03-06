@@ -4,7 +4,7 @@
 namespace SDL {
 	Mixer::Mixer()
 		:
-		m_Volume(10)
+		m_MusicVolume(10)
 	{
 		SDL_Init(SDL_INIT_AUDIO);
 		Mix_Init(MIX_INIT_MP3 | MIX_INIT_OGG);
@@ -22,13 +22,13 @@ namespace SDL {
 		}
 	}
 
-	int Mixer::SetMusicVolume(unsigned int volume) const {
-		Mixer::m_Volume = volume>128 ? 128 : volume;
+	unsigned int Mixer::SetMusicVolume(unsigned int volume) const {
+		m_MusicVolume = volume>128 ? 128 : volume;
 		Mix_VolumeMusic(volume);
-		return Mixer::m_Volume;
+		return m_MusicVolume;
 	}
 
-	int Mixer::GetMusicVolume() const {
-		return m_Volume;
+	unsigned int Mixer::GetMusicVolume() const {
+		return m_MusicVolume;
 	}
 }

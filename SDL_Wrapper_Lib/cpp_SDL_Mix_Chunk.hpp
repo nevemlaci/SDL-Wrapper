@@ -20,8 +20,15 @@ namespace SDL {
 
 		Mix_Chunk* GetSDLChunk() const;
 
-	private:
+		/// @brief Sets the volume of the chunk
+		/// @param volume volume to be set, 0-128
+		/// @return returns the new volume
+		unsigned int SetVolume(unsigned int volume) const;
 
+		int GetVolume() const;
+
+	private:
+		mutable int m_Volume;
 		Mix_Chunk* m_SDLChunk;
 
 	};
