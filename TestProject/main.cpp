@@ -9,7 +9,7 @@ int main() {
 		bool isRunning = true;
 		const SDL_Event& event = sdl.GetEvent();
 		sdl.GetMixer().OpenAudio(48000, MIX_DEFAULT_FORMAT, 1, 1024);
-		SDL::MixMusic m("music.wav");
+		SDL::MixMusic m("music.mp3");
 		sdl.GetMixer().SetMusicVolume(10);
 		sdl.GetMixer().PlayMusic(m);
 		while (isRunning) {
