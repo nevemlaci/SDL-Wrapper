@@ -16,10 +16,12 @@ namespace SDL {
 		//delete the assignment operator
 		SDL operator=(const SDL&) = delete;
 
-		/// @brief Get static instance of SDL
-		/// @return returns the static SDL instance
-		static SDL& Get() ;
+		/// @brief Get instance reference of SDL
+		/// @return returns the SDL instance reference
+		static SDL& Get();
 
+		/// @brief Get the Mixer instance reference
+		/// @return the Mixer instance reference
 		const Mixer& GetMixer() const;
 
 		/// @brief polls all SDL events, should be used in a while loop inside the main loop to handle all events

@@ -1,7 +1,7 @@
 #ifndef __CPPSDL_MIXER__
 #define __CPPSDL_MIXER__
 #include <SDL_mixer.h>
-#include "cpp_SDL_Mix_Music.hpp"
+
 namespace SDL {
 	/// @brief Singleton class for wrapping SDL Mixer
 	class Mixer {
@@ -21,15 +21,6 @@ namespace SDL {
 		/// @param channels channels number of channels (1 is mono, 2 is stereo, etc).
 		/// @param chunk_size audio buffer size in sample FRAMES (total samples divided by channel count).
 		void OpenAudio(int frequency, Uint16 format, int channels, int chunk_size) const;
-
-		/// @brief start a music and play it once
-		/// @param music music to be player
-		void PlayMusic(const MixMusic& music) const;
-		
-		/// @brief start a music and loop it
-		/// @param music music to be player
-		/// @param loopAmount amount of times to be looped (0 means play it once)
-		void PlayMusic(const MixMusic& music, int loopAmount) const;
 
 		/// @brief Sets the volume for all channels
 		/// @param volume volume value(0-128)
