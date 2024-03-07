@@ -2,7 +2,11 @@
 #include <iostream>
 
 namespace SDL {
-	SDL::SDL() : m_SDLInit(SDL_Init(SDL_INIT_EVERYTHING)), m_SDLEvent(SDL_Event()) {
+	SDL::SDL() 
+		: 
+		m_SDLInit(SDL_Init(SDL_INIT_EVERYTHING)), m_SDLEvent(SDL_Event()),
+		m_Mixer(Mixer::Get()) 
+	{
 		if (m_SDLInit != 0) {
 			throw SDL_GetError();
 		}
@@ -11,6 +15,10 @@ namespace SDL {
 	SDL& SDL::Get() { 
 		static SDL instance;
 		return instance; 
+	}
+
+	const Mixer& SDL::GetMixer() const {
+		return m_Mixer;
 	}
 
 	int SDL::PollEvents() {
