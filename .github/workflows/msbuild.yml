@@ -16,6 +16,8 @@ on:
     paths-ignore:
       - "**/README.md"
       - "**/*.yml"
+      - ".gitignore"
+      - ".gitattributes"
 
 env:
   # Path to the solution file relative to the root of the project.
