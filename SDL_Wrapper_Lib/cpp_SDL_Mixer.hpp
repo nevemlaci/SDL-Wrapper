@@ -22,15 +22,6 @@ namespace SDL {
 		/// @param chunk_size audio buffer size in sample FRAMES (total samples divided by channel count).
 		void OpenAudio(int frequency, Uint16 format, int channels, int chunk_size) const;
 
-		/// @brief Sets the volume for all channels
-		/// @param volume volume value(0-128)
-		/// @return returns the new volume
-		unsigned int SetMusicVolume(unsigned int volume) const;
-
-		/// @brief 
-		/// @return returns the current volume
-		unsigned int GetMusicVolume() const;
-
 	private:
 		Mixer();
 
@@ -38,7 +29,7 @@ namespace SDL {
 		/// @return static instance reference to Mixer
 		static const Mixer& Get();
 
-		mutable int m_MusicVolume;
+		
 	};
 }
 #endif

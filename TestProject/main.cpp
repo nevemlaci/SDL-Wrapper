@@ -32,7 +32,7 @@ int main() {
 		SDL::MixMusic ms("music.mp3");
 
 		//Set the music volume to 7 
-		sdl.GetMixer().SetMusicVolume(7);
+		ms.SetMusicVolume(10);
 
 		//Play the music
 		ms.Play();
@@ -67,7 +67,8 @@ int main() {
 			//We clear the renderer
 			renderer.RenderClear();
 
-			//Copy tx texture onto the rendering target at position (10, 10) with dimensions (50, 50)
+			//Copy tx texture onto the rendering target 
+			//at position (10, 10) with dimensions (50, 50)		
 			renderer << SDL::at({ 10, 10, 50, 50 }) << tx;
 
 			//We render everything that is currently copied onto the rendering target

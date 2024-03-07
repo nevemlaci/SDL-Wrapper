@@ -2,7 +2,7 @@
 
 namespace SDL {
 	MixChunk::MixChunk(const char* path) 
-		: m_SDLChunk(Mix_LoadWAV(path))
+		: m_SDLChunk(Mix_LoadWAV(path)), m_Volume(30)
 	{
 		if (!m_SDLChunk) throw SDL_GetError();
 	}
