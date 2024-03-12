@@ -77,9 +77,13 @@ namespace SDL {
 		/// @param texture texture to be copied
 		Renderer& operator<<(const Texture& texture);
 
-		Renderer& operator<<(const at& a);
+		/// @brief copies a texture to the rendering target at a rectangle, takes an SDL::at object
+		/// @param at the at object specifying the destination rectangle on the rendering target
+		Renderer& operator<<(const at& at);
 
-		Renderer& operator<<(const from& f);
+		/// @brief copies a texture to the rendering target from a rectangle, takes an SDL::from object
+		/// @param from the SDL::from object specifying the source rectangle on the texture
+		Renderer& operator<<(const from& from);
 
 
 	private:

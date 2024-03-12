@@ -37,6 +37,9 @@ int main() {
 		//Play the music
 		ms.Play();
 
+		//Load text "asd" with comic.ttf font with the default renderer
+		SDL::Text t("asd", SDL::Font ("comic.ttf", 40), renderer);
+
 		//Set the render color for RenderClear
 		renderer.SetRenderColor(160, 233, 250, 255);
 
@@ -68,9 +71,13 @@ int main() {
 			renderer.RenderClear();
 
 			//Copy tx texture onto the rendering target 
-			//at position (10, 10) with dimensions (50, 50)		
+			//at position (10, 10) with dimensions (50, 50)	
 			renderer << SDL::at({ 10, 10, 50, 50 }) << tx;
 
+			//Copy t text onto the rendering target 
+			//at position (10, 30) with dimensions (100, 100)	
+			renderer << SDL::at({ 10, 60, 50, 50 }) << t;
+				
 			//We render everything that is currently copied onto the rendering target
 			renderer.RenderPresent();
 		}

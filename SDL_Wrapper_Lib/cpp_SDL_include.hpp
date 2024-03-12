@@ -16,5 +16,6 @@
 #include "cpp_SDL_Mixer.hpp"
 #include "cpp_SDL_Mix_Music.hpp"
 #include "cpp_SDL_Mix_Chunk.hpp"
+#include "cpp_SDL_Text.hpp"
 
 #endif

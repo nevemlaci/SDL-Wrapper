@@ -48,6 +48,12 @@
     <ClInclude Include="cpp_SDL_Mix_Chunk.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="cpp_SDL_Text.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_SDL_Font.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cpp_SDL.cpp">
@@ -72,6 +78,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="cpp_SDL_Mix_Chunk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp_SDL_Text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp_SDL_Font.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
