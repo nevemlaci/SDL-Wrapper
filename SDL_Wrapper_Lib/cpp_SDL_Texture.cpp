@@ -2,7 +2,7 @@
 #include "cpp_SDL_Renderer.hpp"
 
 namespace SDL {
-	Texture::Texture(): m_SDLTexture(nullptr) {
+	Texture::Texture() : m_SDLTexture(nullptr)  {
 		
 	}
 

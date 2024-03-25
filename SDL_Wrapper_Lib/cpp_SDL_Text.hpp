@@ -12,7 +12,7 @@ namespace SDL {
 
     class Text : public Texture {
     public: 
-        Text(const char* text, const Font& font, const Renderer& renderer);
+        Text(const char* text, const Font& font, const Renderer& renderer, SDL_Color color = { 0, 0, 0, 255 });
         
         ~Text();
     private:

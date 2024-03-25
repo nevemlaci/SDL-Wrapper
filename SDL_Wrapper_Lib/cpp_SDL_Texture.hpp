@@ -12,6 +12,7 @@ namespace SDL {
 
 	class Texture {
 	public:
+
 		Texture();
 		Texture(const char* path, Renderer& renderer);
 		Texture(SDL_Texture* texture);
@@ -19,8 +20,11 @@ namespace SDL {
 		~Texture();
 
 		SDL_Texture* GetSDLTexture() const;
+
 	protected:
+
 		SDL_Texture* m_SDLTexture;
+
 	};
 
 }
