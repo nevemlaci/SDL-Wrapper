@@ -125,7 +125,7 @@
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib</AdditionalDependencies>
     </Link>
     <Lib>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -147,11 +147,12 @@
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib</AdditionalDependencies>
     </Link>
     <Lib>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="cpp_SDL.hpp" />
+    <ClInclude Include="cpp_SDL_Font.hpp" />
     <ClInclude Include="cpp_SDL_include.hpp" />
     <ClInclude Include="cpp_SDL_Mixer.hpp" />
     <ClInclude Include="cpp_SDL_Mix_Chunk.hpp" />
@@ -159,16 +160,19 @@
     <ClInclude Include="cpp_SDL_Rect.hpp" />
     <ClInclude Include="cpp_SDL_Renderer.hpp" />
     <ClInclude Include="cpp_SDL_Renderermanip.hpp" />
+    <ClInclude Include="cpp_SDL_Text.hpp" />
     <ClInclude Include="cpp_SDL_Texture.hpp" />
     <ClInclude Include="cpp_SDL_Window.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cpp_SDL.cpp" />
+    <ClCompile Include="cpp_SDL_Font.cpp" />
     <ClCompile Include="cpp_SDL_Mixer.cpp" />
     <ClCompile Include="cpp_SDL_Mix_Chunk.cpp" />
     <ClCompile Include="cpp_SDL_Mix_Music.cpp" />
     <ClCompile Include="cpp_SDL_Renderer.cpp" />
     <ClCompile Include="cpp_SDL_Renderermanip.cpp" />
+    <ClCompile Include="cpp_SDL_Text.cpp" />
     <ClCompile Include="cpp_SDL_Texture.cpp" />
     <ClCompile Include="cpp_SDL_Window.cpp" />
   </ItemGroup>

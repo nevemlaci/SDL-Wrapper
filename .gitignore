@@ -1,6 +1,9 @@
 #Music
 *.wav
 
+#Font files
+*.ttf
+
 # VS files
 .vs/**
 .x64/**

@@ -57,15 +57,15 @@ namespace SDL {
 	}
 
 
-	Renderer& Renderer::operator<<(const at& a) {
+	Renderer& Renderer::operator<<(const at& at) {
 		this->m_InsertMode = dst;
-		this->m_NextRect = a.getrect();
+		this->m_NextRect = at.getrect();
 		return (*this);
 	}
 
-	Renderer& Renderer::operator<<(const from& f) {
+	Renderer& Renderer::operator<<(const from& from) {
 		this->m_InsertMode = src;
-		this->m_NextRect = f.getrect();
+		this->m_NextRect = from.getrect();
 		return (*this);
 	}
 

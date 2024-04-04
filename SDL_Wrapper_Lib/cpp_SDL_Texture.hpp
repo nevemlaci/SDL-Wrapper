@@ -7,18 +7,26 @@
 #include "SDL_image.h"
 
 namespace SDL {
+
 	class Renderer;
 
 	class Texture {
 	public:
+
+		Texture();
 		Texture(const char* path, Renderer& renderer);
+		Texture(SDL_Texture* texture);
 
 		~Texture();
 
 		SDL_Texture* GetSDLTexture() const;
-	private:
+
+	protected:
+
 		SDL_Texture* m_SDLTexture;
+
 	};
+
 }
 
 #endif
