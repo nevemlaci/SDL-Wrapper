@@ -17,7 +17,7 @@ int main() {
 		SDL::Texture tx("texture.png", renderer);
 
 		//Get the mixer index and open an audio channel with it
-		sdl.GetMixer().OpenAudio(48000, MIX_DEFAULT_FORMAT, 1, 1024);
+		SDL::Mixer::OpenAudio(48000, MIX_DEFAULT_FORMAT, 1, 1024);
 
 		//Construct an audio chunk by loading an audio file
 		SDL::MixChunk sfx("Explosion.wav");
@@ -41,7 +41,7 @@ int main() {
 		SDL::Text t("asd", SDL::Font ("comic.ttf", 40), renderer);
 
 		//Set the render color for RenderClear
-		renderer.SetRenderColor(160, 233, 250, 255);
+		renderer.SetRenderDrawColor(160, 233, 250, 255);
 
 		//This variable indicates if the main loop should be running or not
 		bool isRunning = true;
