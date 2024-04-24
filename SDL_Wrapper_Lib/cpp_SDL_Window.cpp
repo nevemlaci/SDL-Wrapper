@@ -21,7 +21,7 @@ namespace SDL {
 		SDL_ShowWindow(this->m_SDLWindow);
 	}
 
-	SDL_Window* Window::GetWindow() const {
+	SDL_Window* Window::GetSDLWindow() const {
 		return this->m_SDLWindow;
 	}
 }

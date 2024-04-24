@@ -5,8 +5,7 @@
 namespace SDL {
 	SDL::SDL() 
 		: 
-		m_SDLInit(SDL_Init(SDL_INIT_EVERYTHING)), m_SDLEvent(SDL_Event()),
-		m_Mixer(Mixer::Get()) 
+		m_SDLInit(SDL_Init(SDL_INIT_EVERYTHING)), m_SDLEvent(SDL_Event())
 	{
 		TTF_Init();
 		if (m_SDLInit != 0) {
@@ -17,10 +16,6 @@ namespace SDL {
 	SDL& SDL::Get() { 
 		static SDL instance;
 		return instance; 
-	}
-
-	const Mixer& SDL::GetMixer() const {
-		return m_Mixer;
 	}
 
 	int SDL::PollEvents() {

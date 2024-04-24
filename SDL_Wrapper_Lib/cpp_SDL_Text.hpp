@@ -10,7 +10,7 @@
 
 namespace SDL {
 
-    class Text : public Texture {
+    class Text final : public Texture  {
     public: 
         Text(const char* text, const Font& font, const Renderer& renderer, SDL_Color color = { 0, 0, 0, 255 });
         

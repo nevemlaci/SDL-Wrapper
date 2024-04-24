@@ -12,7 +12,7 @@ namespace SDL {
 	};
 
 	/// @brief Renderer class wrapping SDL_Renderer
-	class Renderer {
+	class Renderer final {
 	public:
 		/// @brief renderer constructor
 		/// @param p_window window that the renderer is bound to
@@ -54,6 +54,10 @@ namespace SDL {
 		/// @param angle optional rotation
 		void RenderCopyEx(const Texture& texture, Rect srcrect, Rect dstrect, double angle = 0) const;
 
+		void SetRenderDrawColor(uint8_t r, uint8_t g, uint8_t b, uint8_t a);
+
+		void FillRect(const Rect& rect);
+
 		/// @brief Clears the renderer
 		void RenderClear() const;
 
@@ -65,13 +69,6 @@ namespace SDL {
 
 		/// @brief Disables VSync
 		void DisableVsync() const;
-
-		/// @brief Sets the renderclear color
-		/// @param r 0-255 (red)
-		/// @param g 0-255 (green)
-		/// @param b 0-255 (blue)
-		/// @param a 0-255 (alpha)
-		void SetRenderColor(int r, int g, int b, int a) const;
 
 		/// @brief same as Renderer::RenderCopy
 		/// @param texture texture to be copied

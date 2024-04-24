@@ -19,7 +19,7 @@ namespace SDL {
 		return m_SDLChunk;
 	}
 
-	unsigned int MixChunk::SetVolume(unsigned int volume) const {
+	unsigned int MixChunk::SetVolume(unsigned int volume){
 		Mix_VolumeChunk(m_SDLChunk, volume);
 		m_Volume = m_SDLChunk->volume;
 		return m_Volume;

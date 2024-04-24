@@ -4,7 +4,7 @@
 
 namespace SDL {
 	/// @brief helper class for the operator<< overload
-	class at {
+	class at final {
 	public:
 		/// @brief explicit constructor(so SDL::Rect cannot be implicitly converted to SDL::at)
 		/// @param rect rectangle to be saved as destination
@@ -14,7 +14,7 @@ namespace SDL {
 		const Rect& m_Rect;
 	};
 
-	class from {
+	class from final {
 	public:
 		/// @brief explicit constructor(so SDL::Rect cannot be implicitly converted to SDL::from)
 		/// @param rect rectangle to be saved as source

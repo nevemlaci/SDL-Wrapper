@@ -3,7 +3,7 @@
 #include <SDL.h>
 
 namespace SDL {
-	class Window {
+	class Window final {
 	public:
 		/// @brief Constructs a window. Throws const char* SDL_GetError() if the window initialization failed.
 		/// @param title Title of the window
@@ -18,7 +18,7 @@ namespace SDL {
 
 		/// @brief 
 		/// @return the SDL_Window* of the current Window instance 
-		SDL_Window* GetWindow() const;
+		SDL_Window* GetSDLWindow() const;
 
 		/// @brief hides the window
 		void HideWindow();

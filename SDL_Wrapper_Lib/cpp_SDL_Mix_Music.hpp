@@ -5,7 +5,7 @@
 
 namespace SDL {
 
-class MixMusic{
+class MixMusic final{
 public:
 
 	MixMusic(const char* path);
@@ -19,7 +19,7 @@ public:
 	/// @brief Sets the volume for all channels
 	/// @param volume volume value(0-128)
 	/// @return returns the new volume
-	unsigned int SetMusicVolume(unsigned int volume) const;
+	unsigned int SetMusicVolume(unsigned int volume);
 
 	/// @brief 
 	/// @return returns the current volume
@@ -29,7 +29,7 @@ public:
 	/// @return the stored Mix_Music* 
 	Mix_Music* GetSDLMusic() const;
 private:
-	mutable unsigned int m_MusicVolume;
+	unsigned int m_MusicVolume;
 
 	Mix_Music* m_SDLMusic;
 };

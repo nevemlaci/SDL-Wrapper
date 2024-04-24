@@ -2,7 +2,7 @@
 
 namespace SDL {
 	Renderer::Renderer(const Window& p_window, int index, Uint32 flags)
-		: m_Window(p_window), m_SDLRenderer(SDL_CreateRenderer(p_window.GetWindow(), index, flags)), m_InsertMode(src), m_NextRect({0, 0, 0, 0}) {
+		: m_Window(p_window), m_SDLRenderer(SDL_CreateRenderer(p_window.GetSDLWindow(), index, flags)), m_InsertMode(src), m_NextRect({0, 0, 0, 0}) {
 		if (!m_SDLRenderer) {
 			throw SDL_GetError();
 		}
@@ -36,6 +36,15 @@ namespace SDL {
 		SDL_RenderCopyExF(this->m_SDLRenderer, texture.GetSDLTexture(), &srcr, &dstr, angle, NULL, SDL_FLIP_NONE);
 	}
 
+	void Renderer::SetRenderDrawColor(uint8_t r, uint8_t g, uint8_t b, uint8_t a) {
+		SDL_SetRenderDrawColor(m_SDLRenderer, r, g, b, a);
+	}
+
+	void Renderer::FillRect(const Rect& rect) {
+		SDL_FRect r = rect.GetSDLFRect(); 
+		SDL_RenderFillRectF(m_SDLRenderer, &r);
+	}
+
 	void Renderer::RenderClear() const {
 		SDL_RenderClear(this->m_SDLRenderer);
 	}
@@ -51,11 +60,6 @@ namespace SDL {
 	void Renderer::DisableVsync() const {
 		SDL_RenderSetVSync(this->m_SDLRenderer, 0);
 	}
-
-	void Renderer::SetRenderColor(int r, int g, int b, int a) const {
-		SDL_SetRenderDrawColor(this->m_SDLRenderer, r, g, b, a);
-	}
-
 
 	Renderer& Renderer::operator<<(const at& at) {
 		this->m_InsertMode = dst;

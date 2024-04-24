@@ -3,7 +3,7 @@
 #include <SDL_ttf.h>
 
 namespace SDL {
-	class Font{
+	class Font final{
 	public:
 		Font(const char* path, unsigned int font_size = 14);
 		~Font();

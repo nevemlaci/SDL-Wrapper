@@ -4,7 +4,7 @@
 #include <SDL_mixer.h>
 
 namespace SDL {
-	class MixChunk
+	class MixChunk final
 	{
 	public:
 		/// @brief Constructor. Loads a chunk
@@ -23,12 +23,12 @@ namespace SDL {
 		/// @brief Sets the volume of the chunk
 		/// @param volume volume to be set, 0-128
 		/// @return returns the new volume
-		unsigned int SetVolume(unsigned int volume) const;
+		unsigned int SetVolume(unsigned int volume);
 
 		int GetVolume() const;
 
 	private:
-		mutable int m_Volume;
+		int m_Volume;
 		Mix_Chunk* m_SDLChunk;
 
 	};

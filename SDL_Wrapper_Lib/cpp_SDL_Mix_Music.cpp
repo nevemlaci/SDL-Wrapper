@@ -16,7 +16,7 @@ namespace SDL {
 		Mix_PlayMusic(this->m_SDLMusic, loops);
 	}
 
-	unsigned int MixMusic::SetMusicVolume(unsigned int volume) const {
+	unsigned int MixMusic::SetMusicVolume(unsigned int volume) {
 		m_MusicVolume = volume > 128 ? 128 : volume;
 		Mix_VolumeMusic(volume);
 		return m_MusicVolume;
